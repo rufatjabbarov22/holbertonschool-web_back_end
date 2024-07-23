@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 export default function setFromArray(array) {
-  return new Set(Array)
+	return new Set(array);
 }
