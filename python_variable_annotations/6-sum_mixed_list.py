@@ -8,7 +8,8 @@ def sum_mixed_list(mxd_lst: List[Union[int, float]]) -> float:
     Returns the sum of a list of mixed floats and integers.
 
     Args:
-        mxd_lst (List[Union[int, float]]): The list of mixed floats and integers to be summed.
+        mxd_lst (List[Union[int, float]]): The list of mixed
+          floats and integers to be summed.
 
     Returns:
         float: The sum of the list of mixed floats and integers.
