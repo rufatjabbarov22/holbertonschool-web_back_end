@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
+"""Write a type-annotated function concat that takes
+a string str1 and a string str2 as arguments and
+returns a concatenated string"""
 
-def add(a: float, b: float) -> float:
-    """returns the sum of two floats"""
-    return a + b
+
+def concat(str1: str, str2: str) -> str:
+    """returns the concatenated strings"""
+    return str1 + str2
