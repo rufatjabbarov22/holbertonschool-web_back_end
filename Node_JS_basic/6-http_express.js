@@ -1,11 +1,12 @@
+// 6-http_express.js
 const express = require('express');
 
-const port = 1245;
 const app = express();
-module.exports = app;
 
 app.get('/', (req, res) => {
-  res.send('Hello Holberton School!');
+    res.send('Hello Holberton School!\n');
 });
 
-app.listen(port);
+app.listen(1245);
+module.exports = app;
+
