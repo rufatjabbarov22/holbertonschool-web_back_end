@@ -1,32 +1,21 @@
-require('dotenv').config();
 const express = require('express');
-const morgan = require('morgan');
 
-const port = process.env.PORT || 1245;
 const app = express();
+const port = 1245;
 
-// Логирование запросов
-app.use(morgan('dev'));
-
+// Обработчик для корневого маршрута
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
 });
 
 // Обработка ошибок 404
-app.use((req, res, next) => {
+app.use((req, res) => {
   res.status(404).send('Not Found');
 });
 
-// Общая обработка ошибок
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
-// Запускаем сервер
+// Запуск сервера
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
 
-// Экспортируем приложение
 module.exports = app;
